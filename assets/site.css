@@ -28,3 +28,11 @@ section[id] { scroll-margin-top: 96px; }
   #top p { font-size: 16px !important; }
   #top p br { display: none; }
 }
+
+/* When the doctor profile stacks (photo above text), the photo should scroll with the page
+   instead of staying pinned over the text. */
+@media (max-width: 860px) {
+  #dr-bae [style*="position: sticky"],
+  #dr-kang [style*="position: sticky"],
+  #dr-kang-sg [style*="position: sticky"] { position: static !important; }
+}
