@@ -1,0 +1,30 @@
+/* Phone-size adjustments for the live site (the design was laid out desktop-first). */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 96px; }
+
+@media (max-width: 760px) {
+  header > div { padding: 10px 16px !important; gap: 8px !important; }
+  header > div > a:first-child img { height: 36px !important; }
+  header nav {
+    width: 100%;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    white-space: nowrap;
+    gap: 18px !important;
+    font-size: 14px !important;
+    padding-bottom: 2px;
+  }
+  header nav::-webkit-scrollbar { display: none; }
+  header nav a { flex: 0 0 auto; }
+  section[id] { scroll-margin-top: 112px; }
+
+  /* hero: give the copy the full width, arrows off (slides still advance) */
+  #top { min-height: 560px !important; }
+  #top > div[style*="z-index: 2"] { padding: 88px 24px 72px !important; }
+  #top .wd-arrow { display: none !important; }
+  #top h1 { font-size: 34px !important; }
+  #top p { font-size: 16px !important; }
+  #top p br { display: none; }
+}
