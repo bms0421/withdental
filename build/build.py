@@ -17,6 +17,9 @@ PAGES = {
     'English': dict(path='en/', lang='en',
         title='WITH Dental Clinic Seoul | English-speaking Prosthodontist & Orthodontist in Yeouido',
         desc='Prosthodontic and orthodontic care in English in Yeouido, Seoul, since 1993. 100% by appointment: book by email or KakaoTalk. A 1-minute walk from Yeouido Station, Exit 4.'),
+    'Chinese': dict(path='zh/', lang='zh-Hans',
+        title='首尔汝矣岛 WITH 牙科 | 口腔修复科·正畸科专科医生诊疗（Since 1993）',
+        desc='首尔汝矣岛的 WITH 牙科，自1993年起在同一地点诊疗。口腔修复科与正畸科专科医生协同诊疗。距 The Hyundai Seoul 步行约3分钟，金浦机场乘地铁约15分钟。可提前预约合作的牙科专业中文翻译。100% 预约制。'),
     'Notice': dict(path='notice/', lang='ko',
         title='공지사항 · 월별 진료 일정 | 위드치과보철과',
         desc='위드치과보철과의 월별 원장 진료 일정과 휴진 안내 등 공지사항입니다.'),
@@ -159,15 +162,16 @@ def head_meta(name, cfg, prefix, faq=None):
         '<meta property="og:description" content="%s">' % html.escape(cfg['desc']),
         '<meta property="og:url" content="%s">' % url,
         '<meta property="og:image" content="%s/assets/img/og.jpg">' % DOMAIN,
-        '<meta property="og:locale" content="%s">' % ('en_US' if cfg['lang'] == 'en' else 'ko_KR'),
+        '<meta property="og:locale" content="%s">' % {'en': 'en_US', 'zh-Hans': 'zh_CN'}.get(cfg['lang'], 'ko_KR'),
         '<meta name="twitter:card" content="summary_large_image">',
     ]
     if cfg.get('noindex'):
         out.append('<meta name="robots" content="noindex, follow">')
-    if name in ('Main', 'English'):
+    if name in ('Main', 'English', 'Chinese'):
         out += [
             '<link rel="alternate" hreflang="ko" href="%s/">' % DOMAIN,
             '<link rel="alternate" hreflang="en" href="%s/en/">' % DOMAIN,
+            '<link rel="alternate" hreflang="zh-Hans" href="%s/zh/">' % DOMAIN,
             '<link rel="alternate" hreflang="x-default" href="%s/">' % DOMAIN,
         ]
         ld = dict(JSONLD_CLINIC)
@@ -175,6 +179,11 @@ def head_meta(name, cfg, prefix, faq=None):
             ld = dict(ld, name='WITH Dental Clinic Seoul', alternateName=['위드치과보철과', 'WITH Dental Prosthodontics Clinic'],
                       url=DOMAIN + '/en/',
                       description='Family-run dental clinic in Yeouido, Seoul, since 1993. Board-certified prosthodontist and orthodontist; consultations in English. By appointment only.',
+                      address=dict(JSONLD_CLINIC['address'], streetAddress='#401, 4F, Daeo Bldg., 53-1 Yeouinaru-ro', addressLocality='Yeongdeungpo-gu', addressRegion='Seoul'))
+        if name == 'Chinese':
+            ld = dict(ld, name='WITH 牙科（WITH Dental Clinic Seoul）', alternateName=['WITH Dental Clinic Seoul', '위드치과보철과'],
+                      url=DOMAIN + '/zh/',
+                      description='首尔汝矣岛的牙科诊所，自1993年起在同一地点诊疗。口腔修复科与口腔正畸科专科医生协同诊疗。可提前预约牙科专业中文翻译。100% 预约制。',
                       address=dict(JSONLD_CLINIC['address'], streetAddress='#401, 4F, Daeo Bldg., 53-1 Yeouinaru-ro', addressLocality='Yeongdeungpo-gu', addressRegion='Seoul'))
         out.append('<script type="application/ld+json">%s</script>' % json.dumps(ld, ensure_ascii=False))
     if cfg.get('about'):
