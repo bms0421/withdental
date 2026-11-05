@@ -285,6 +285,7 @@ def main():
         faq = r['faq'] or None
         open(out_dir + 'index.html', 'w').write(page_html(name, cfg, helmet, body, logic, props, prefix, r['html'], faq))
 
+    shutil.copy(BUILD + '/llms.txt', OUT + '/llms.txt')
     open(OUT + '/CNAME', 'w').write('withdental.kr\n')
     open(OUT + '/.nojekyll', 'w').write('')
     open(OUT + '/robots.txt', 'w').write('User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n' % DOMAIN)

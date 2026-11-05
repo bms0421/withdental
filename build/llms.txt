@@ -1,0 +1,40 @@
+# 위드치과보철과 (WITH Dental Clinic Seoul)
+
+> 서울 여의도에서 1993년부터 같은 자리에서 진료해 온 치과입니다. 치과보철과 전문의와 치과교정과 전문의가 함께 진단하고, 치주과 전문의 자문원장이 협진합니다. 진료 모토는 "기본에 충실한 원칙적이고 바른 진료"입니다. 100% 예약제로 운영합니다.
+
+## 기본 정보
+
+- 병원명: 위드치과보철과 (영문: WITH Dental Clinic Seoul)
+- 주소: 서울특별시 영등포구 여의나루로 53-1 대오빌딩 4층 401호 (여의도역 4번 출구 인근)
+- 전화: 02-783-2825 / 팩스: 02-783-2826
+- 이메일: withdental_seoul@naver.com
+- 진료시간: 평일 10:00–18:30, 토요일 09:30–14:00(격주), 점심시간 13:00–14:00
+- 예약: 네이버 예약 https://booking.naver.com/booking/13/bizes/1126036 , 카카오톡 채널 https://pf.kakao.com/_xjeAxmG
+- 유튜브: https://www.youtube.com/@withdentalseoul
+- 진료 언어: 한국어, 영어(외국인 환자 상담 가능), 일본어
+
+## 의료진
+
+- 배민수 대표원장 (Minsoo Bae): 치과보철과 전문의, 통합치의학과 전문의, 치의학박사(치과보철학). 전북대학교 치과병원 치과보철과 인턴·레지던트 수료. 대한치과보철학회 인정의, 대한턱관절교합학회 인정의, 대한심미치과학회 연구실행이사, SKCD 정회원. 자연치아 보존 수복, 심미보철, 전악보철·교합재건, 임플란트 보철을 진료합니다.
+- 강재연 대표원장 (Jaeyoen Kang): 치과교정과 전문의. 인비절라인 투명교정 등 교정 치료를 진료합니다.
+- 강승구 자문원장 (Seungkoo Kang): 치주과 전문의, UCLA 임플란트 보철 수련.
+
+## 진료 철학
+
+- 치료 여부부터 신중하게 진단하고, "이 치아가 내 치아라면 어떻게 할 것인가"를 기준으로 결정합니다.
+- 건강한 치아는 가능한 한 깎지 않는 최소 삭제 원칙과, 접착 기반의 생체모방(Biomimetic) 치료를 지향합니다.
+- 보철과·교정과·치주과 전문의가 함께 계획을 세웁니다.
+
+## 진료 안내 페이지
+
+- [메인](https://withdental.kr/): 병원 소개, 의료진, 진료 분야, 자주 묻는 질문, 오시는 길
+- [심미보철치료](https://withdental.kr/treatments/esthetic-prosthodontics/): 앞니 심미보철, 라미네이트, 앞니 크라운 재치료, 무삭제 레진 비니어. 색·투명도 분석, 진단 왁스업과 목업으로 결과를 먼저 확인한 뒤 최소 삭제로 진행합니다. 치료 사례와 자주 묻는 질문.
+- [자연치아 보존 수복](https://withdental.kr/treatments/conservative-restoration/): 레진 빌드업, 인레이, 온레이, 접착 오버레이. 러버댐 격리 하의 접착 수복, 금 간 치아(크랙) 진단.
+- [미세치주성형](https://withdental.kr/treatments/periodontal-plastic-surgery/): 잇몸퇴축 치근피개술, 결합조직이식, 잇몸 두께 재건, 거미스마일 치은성형술. 치료 사례와 자주 묻는 질문.
+- [인비절라인 투명교정](https://withdental.kr/treatments/invisalign/): 치과교정과 전문의가 진단부터 유지 관리까지 계획합니다. 필요하면 보철과 전문의와 함께 최종 모습을 설계합니다.
+- [공지사항](https://withdental.kr/notice/): 월별 원장 진료 일정과 휴진 안내
+- [비급여 진료비 안내](https://withdental.kr/fees/)
+
+## English
+
+- [English page](https://withdental.kr/en/): WITH Dental Clinic Seoul is a family-run dental clinic in Yeouido, Seoul, at the same location since 1993. Board-certified prosthodontist and orthodontist, with a periodontist as consulting dentist. Consultations in English; by appointment only (email withdental_seoul@naver.com or KakaoTalk). Near Yeouido Station, Exit 4.
