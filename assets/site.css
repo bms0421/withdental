@@ -36,3 +36,11 @@ section[id] { scroll-margin-top: 96px; }
   #dr-kang [style*="position: sticky"],
   #dr-kang-sg [style*="position: sticky"] { position: static !important; }
 }
+
+/* Language globe: inside the scrolling phone nav the menu would be clipped, so on phones
+   the globe sits on the logo row instead. */
+@media (max-width: 760px) {
+  header .wd-lang-m { display: inline-flex !important; margin-left: auto; }
+  header nav .wd-lang { display: none !important; }
+  .wd-lang-m .wd-lang-panel { right: -6px; }
+}
