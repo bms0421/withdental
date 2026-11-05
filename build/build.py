@@ -204,10 +204,14 @@ def main():
     shutil.copy(BUILD + '/site.css', OUT + '/assets/site.css')
 
     img_names = {}
+    used = set()
+    for name in PAGES:
+        used.update(re.findall(r'/_blob/([a-f0-9]{32})', open('%s/%s.dc.html' % (SRC, name)).read()))
     for bid, path in BLOBMAP.items():
         fn = os.path.basename(path)
         img_names[bid] = fn
-        shutil.copy(path, OUT + '/assets/img/' + fn)
+        if bid in used:
+            shutil.copy(path, OUT + '/assets/img/' + fn)
 
     # favicon from the WDC mark
     logo = Image.open(os.path.join(ROOT, 'images/web-logo.png')).convert('RGBA')
