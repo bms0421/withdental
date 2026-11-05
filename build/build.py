@@ -12,8 +12,8 @@ BLOBMAP = {k: os.path.join(ROOT, v) for k, v in json.load(open(os.path.join(os.p
 
 PAGES = {
     'Main': dict(path='', lang='ko',
-        title='위드치과보철과 | 여의도 치과보철과·치과교정과 전문의 진료 (Since 1993)',
-        desc='1993년부터 여의도 같은 자리에서 진료해 온 위드치과보철과. 치과보철과 전문의와 치과교정과 전문의가 함께 진단하는 자연치아 보존 수복, 심미보철, 전악보철·교합재건, 임플란트, 교정 치료. 여의도역 4번 출구 도보 1분, 예약제 운영.'),
+        title='여의도 치과 위드치과보철과 | 보철과·교정과 전문의 진료 (Since 1993)',
+        desc='여의도 치과 위드치과보철과. 1993년부터 같은 자리에서 진료해 왔습니다. 치과보철과 전문의와 치과교정과 전문의가 함께 진단하는 앞니 심미보철, 자연치아 보존 수복, 임플란트, 전악보철·교합재건, 인비절라인 교정. 여의도역 4번 출구 도보 1분, 예약제 운영.'),
     'English': dict(path='en/', lang='en',
         title='WITH Dental Clinic Seoul | English-speaking Prosthodontist & Orthodontist in Yeouido',
         desc='Prosthodontic and orthodontic care in English in Yeouido, Seoul, since 1993. 100% by appointment: book by email or KakaoTalk. A 1-minute walk from Yeouido Station, Exit 4.'),
@@ -27,13 +27,16 @@ PAGES = {
         title='개인정보처리방침 | 위드치과보철과',
         desc='위드치과보철과 개인정보처리방침입니다.'),
     'Invisalign': dict(path='treatments/invisalign/', lang='ko',
-        title='인비절라인 투명교정 | 여의도 위드치과보철과 (치과교정과 전문의 진료)',
+        title='여의도 인비절라인 투명교정 | 위드치과보철과 (치과교정과 전문의 진료)', crumb='인비절라인 투명교정',
+        about=['인비절라인 투명교정', '투명교정', '치아교정'],
         desc='여의도 위드치과보철과의 인비절라인 투명교정. 치과교정과 전문의가 진단부터 유지 관리까지 직접 계획하고, 보철 치료가 필요하면 치과보철과 전문의와 함께 최종 모습을 설계합니다. 착용 시간, 치료 과정, 브라켓 교정과의 비교, 자주 묻는 질문.'),
     'Restorative': dict(path='treatments/conservative-restoration/', lang='ko',
-        title='자연치아 보존 수복 (레진·인레이·온레이·오버레이) | 여의도 위드치과보철과',
+        title='여의도 자연치아 보존 수복 (레진·인레이·온레이·오버레이) | 위드치과보철과', crumb='자연치아 보존 수복',
+        about=['자연치아 보존 수복', '레진 수복', '인레이', '온레이', '접착 오버레이', '생체모방 치과치료(Biomimetic)'],
         desc='여의도 위드치과보철과의 자연치아 보존 수복. 충치와 손상 범위에 따라 레진 빌드업, 인레이, 온레이, 오버레이 순으로 가장 적게 깎는 방법을 고르고, 러버댐 격리 하에 접착 기반의 생체모방 치료(Biomimetic)로 진행합니다. 치과보철과 전문의 배민수 원장 진료.'),
     'Perio': dict(path='treatments/periodontal-plastic-surgery/', lang='ko',
-        title='미세치주성형 (잇몸퇴축 치근피개술·결합조직이식·거미스마일) | 여의도 위드치과보철과',
+        title='여의도 미세치주성형 (잇몸퇴축 치근피개술·결합조직이식·거미스마일) | 위드치과보철과', crumb='미세치주성형',
+        about=['미세치주성형', '치근피개술', '결합조직이식', '잇몸퇴축 치료', '거미스마일 치은성형술'],
         desc='여의도 위드치과보철과의 미세치주성형. 내려간 잇몸을 올려 드러난 뿌리를 덮는 치근피개술과 결합조직이식, 잇몸 두께 재건, 치은성형술로 거미스마일 개선까지. 실제 치료 사례와 자주 묻는 질문.'),
     'Fees': dict(path='fees/', lang='ko', noindex=True,
         title='비급여 진료비 안내 | 위드치과보철과',
@@ -68,6 +71,13 @@ JSONLD_CLINIC = {
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "10:00", "closes": "18:30"
     }],
+    "hasMap": "https://maps.google.com/?q=%EC%84%9C%EC%9A%B8%20%EC%98%81%EB%93%B1%ED%8F%AC%EA%B5%AC%20%EC%97%AC%EC%9D%98%EB%82%98%EB%A3%A8%EB%A1%9C%2053-1",
+    "areaServed": ["여의도", "여의도동", "영등포구", "서울"],
+    "knowsAbout": ["앞니 심미보철", "라미네이트", "크라운", "레진 비니어", "자연치아 보존 수복", "접착 오버레이", "임플란트", "전악보철", "교합재건", "인비절라인 투명교정", "치아교정", "미세치주성형", "치근피개술"],
+    "employee": [
+        {"@type": "Person", "name": "배민수", "alternateName": "Minsoo Bae", "jobTitle": "대표원장 · 치과보철과 전문의"},
+        {"@type": "Person", "name": "강재연", "alternateName": "Jaeyoen Kang", "jobTitle": "대표원장 · 치과교정과 전문의"}
+    ],
     "availableLanguage": ["Korean", "English", "Japanese"],
     "medicalSpecialty": ["Prosthodontic", "Orthodontic", "Periodontic"],
     "sameAs": [
@@ -163,6 +173,17 @@ def head_meta(name, cfg, prefix, faq=None):
                       description='Family-run dental clinic in Yeouido, Seoul, since 1993. Board-certified prosthodontist and orthodontist; consultations in English. By appointment only.',
                       address=dict(JSONLD_CLINIC['address'], streetAddress='#401, 4F, Daeo Bldg., 53-1 Yeouinaru-ro', addressLocality='Yeongdeungpo-gu', addressRegion='Seoul'))
         out.append('<script type="application/ld+json">%s</script>' % json.dumps(ld, ensure_ascii=False))
+    if cfg.get('about'):
+        out.append('<script type="application/ld+json">%s</script>' % json.dumps({
+            "@context": "https://schema.org", "@type": "MedicalWebPage", "url": url, "name": cfg['title'],
+            "description": cfg['desc'], "inLanguage": "ko",
+            "about": [{"@type": "MedicalProcedure", "name": a} for a in cfg['about']],
+            "provider": {"@type": "Dentist", "@id": DOMAIN + "/#clinic", "name": "위드치과보철과",
+                         "telephone": JSONLD_CLINIC['telephone'], "address": JSONLD_CLINIC['address']},
+            "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "위드치과보철과", "item": DOMAIN + "/"},
+                {"@type": "ListItem", "position": 2, "name": cfg['crumb'], "item": url}]}
+        }, ensure_ascii=False))
     if faq:
         out.append('<script type="application/ld+json">%s</script>' % json.dumps({
             "@context": "https://schema.org", "@type": "FAQPage",
