@@ -48,6 +48,18 @@ a{color:#26383A}a:hover{color:#1C1F21}
 
 .wd-c-a{transition:background-color .6s ease}
 .wd-c-a:hover,.wd-c-a:focus-visible{background-color:#E8E5DF !important}
+.wd-lang{position:relative;display:inline-flex;align-items:center}
+.wd-lang-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:#52575B;cursor:pointer;border-radius:50%;outline:none;transition:color .2s}
+.wd-lang:hover .wd-lang-btn,.wd-lang:focus-within .wd-lang-btn{color:#1C1F21}
+.wd-lang-btn:focus-visible{box-shadow:0 0 0 2px #26383A}
+.wd-lang-panel{position:absolute;top:100%;right:-14px;padding-top:10px;display:none;z-index:40}
+.wd-lang:hover .wd-lang-panel,.wd-lang:focus-within .wd-lang-panel{display:block}
+.wd-lang-box{background:#F1EFEB;border:1px solid #D2CEC6;box-shadow:0 10px 28px rgba(28,31,33,.10);padding:6px 0;min-width:150px}
+.wd-lang-item{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:9px 18px;font-size:14px;line-height:1.4;color:#1C1F21 !important;text-decoration:none;white-space:nowrap}
+a.wd-lang-item:hover,a.wd-lang-item:focus-visible{background:#E8E6E1}
+.wd-lang-soon{color:#8A9092 !important;cursor:default}
+.wd-lang-m{display:none}
+.wd-lang-soon small{font-size:11px;letter-spacing:.02em}
 </style>
 </helmet>
 <div style="font-family: 'Noto Sans KR', system-ui, sans-serif; color: #1C1F21; background: #E8E6E1; width: 100%; min-height: 100vh; line-height: 1.7; word-break: keep-all">
@@ -59,6 +71,82 @@ a{color:#26383A}a:hover{color:#1C1F21}
 <img src="/_blob/75fad8257fba8615a8bd1a7ce1eea8b6" alt="WITH DENTAL CLINIC 로고" style="height: 48px; width: auto; display: block">
 <span style="font-size: 14px; color: #52575B; letter-spacing: 0.04em; padding-left: 16px; border-left: 1px solid #D2CEC6">위드치과보철과</span>
 </a>
+<div class="wd-lang wd-lang-m">
+<span class="wd-lang-btn" role="button" tabindex="0" aria-haspopup="true" aria-label="언어 선택 Language"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></span>
+<div class="wd-lang-panel"><div class="wd-lang-box">
+<a href="English.dc.html" class="wd-lang-item" lang="en" hreflang="en">ENG<small style="font-size: 11px; color: #8A9092">English</small></a>
+<span class="wd-lang-item wd-lang-soon" lang="zh">中文<small>준비 중</small></span>
+<span class="wd-lang-item wd-lang-soon" lang="ja">日本語<small>준비 중</small></span>
+</div></div>
+</div>
+<a href="https://booking.naver.com/booking/13/bizes/1126036" target="_blank" rel="noopener" style="text-decoration: none; background: {{accent}}; color: #FFFFFF; padding: 10px 20px; border-radius: 2px; font-size: 14px; font-weight: 500; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">진료 예약</a>
+</nav>
+</div>
+</header>
+
+<!-- Hero with slow crossfading visuals -->
+<section id="top" style="position: relative; overflow: hidden; background: #141719; color: #E8E6E1; min-height: 640px; display: flex; align-items: flex-end">
+<div aria-hidden="true" style="position: absolute; inset: 0">
+<sc-for list="{{heroSlides}}" as="s" hint-placeholder-count="1">
+<img src="{{s.src}}" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {{s.pos}}; display: block; transform-origin: 60% 50%; opacity: {{s.op}}; transform: {{s.tf}}; transition: {{s.tr}}">
+</sc-for>
+<div style="position: absolute; inset: 0; background: rgba(20, 23, 25, 0.58)"></div>
+</div>
+<button type="button" aria-label="이전 사진" onClick="{{heroPrev}}" class="wd-arrow" style="position: absolute; z-index: 3; left: 24px; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(232, 230, 225, 0.35); background: rgba(20, 23, 25, 0.28); color: #E8E6E1; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>
+</button>
+<button type="button" aria-label="다음 사진" onClick="{{heroNext}}" class="wd-arrow" style="position: absolute; z-index: 3; right: 24px; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(232, 230, 225, 0.35); background: rgba(20, 23, 25, 0.28); color: #E8E6E1; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg>
+</button>
+<div style="position: absolute; z-index: 3; right: 32px; bottom: 40px; display: flex; gap: 8px">
+<sc-for list="{{heroSlides}}" as="s" hint-placeholder-count="7">
+<span aria-hidden="true" style="width: {{s.dotW}}; height: 2px; background: {{s.dotC}}; display: block; transition: width .6s ease, background-color .6s ease"></span>
+</sc-for>
+</div>
+<div style="position: relative; z-index: 2; max-width: 1240px; width: 100%; margin: 0 auto; padding: 120px 96px 96px; box-sizing: border-box">
+<p style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.24em; color: #9FB0AF">SINCE 1993 · YEOUIDO, SEOUL</p>
+<h1 style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: clamp(36px, 5vw, 62px); line-height: 1.3; letter-spacing: -0.01em">자연치아를 닮게,<br>오래 남도록.</h1>
+<p style="margin: 28px 0 0; max-width: 640px; font-size: 18px; line-height: 1.8; color: #BFC4C6">1993년부터 같은 자리를 지키며,<br>기본에 충실한 원칙적이고 바른 진료를 위해<br>보철과 전문의와 교정과 전문의가 함께 고민하고 진단합니다.</p>
+<div style="margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px">
+<a href="https://booking.naver.com/booking/13/bizes/1126036" target="_blank" rel="noopener" style="text-decoration: none; background: #E8E6E1; color: #1C1F21; padding: 14px 28px; font-size: 15px; font-weight: 500; border-radius: 2px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">상담 예약하기</a>
+<a href="tel:+82-2-783-2825" style="text-decoration: none; border: 1px solid #6E777B; color: #E8E6E1; padding: 14px 28px; font-size: 15px; border-radius: 2px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">02-783-2825</a>
+</div>
+</div>
+</section>
+
+<!-- About the clinic -->
+<section id="about" style="max-width: 1240px; margin: 0 auto; padding: 128px 32px; box-sizing: border-box">
+<p style="margin: 0 0 24px; font-size: 13px; letter-spacing: 0.24em; color: {{accent}}">ABOUT</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px 56px; margin-bottom: 80px">
+<h2 style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.4">1993년부터<br>같은 자리에서,</h2>
+<span aria-hidden="true" style="flex: 0 0 auto; width: 1px; height: 128px; background: #1C1F21; transform: rotate(28deg); display: block"></span>
+<p style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.4; color: {{accent}}">기본에 충실한<br>원칙적이고 바른 진료</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 72px; align-items: flex-start">
+<div style="flex: 1 1 440px; min-width: 0">
+<p style="margin: 0; font-size: 17px; color: #42474A">1993년, 여의도의 한 진료실에서 위드치과보철과의 첫 진료가 시작되었습니다. 도시의 풍경이 몇 번이고 바뀌는 동안에도 저희는 같은 자리를 지켰고, 이제 그 진료실은 가족의 손에서 손으로, 대를 이어 지켜지고 있습니다.</p>
+<p style="margin: 20px 0 0; font-size: 17px; color: #42474A">30년이 넘는 시간 동안 이곳을 찾아 주신 분들의 치아에는 저마다의 세월이 담겨 있습니다. 처음 치료를 받던 날부터 시간에 따라 달라져 온 모습까지, 그 변화를 곁에서 지켜봐 온 치과이기에 저희는 오늘의 치료보다 10년, 20년 뒤의 모습을 먼저 생각합니다.</p>
+<p style="margin: 28px 0 0; font-family: 'Noto Serif KR', serif; font-size: 19px; line-height: 1.75; color: #1C1F21">유행보다 원칙을, 빠른 결과보다 오래가는 결과를.<br>한 세대를 넘어 이어 온 이 약속이 위드치과보철과가 지켜 가는 진료의 기준입니다.</p>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="aspect-ratio: 4 / 3; background: #CFCCC6; overflow: hidden">
+<img src="/_blob/a6e217cd2681d7baf789448384f66b48" alt="위드치과 의료진 — 강승구 자문원장, 배민수 대표원장, 강재연 대표원장" style="width: 100%; height: 100%; object-fit: cover; display: block">
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #D2CEC6; border: 1px solid #D2CEC6">
+<div style="background: #E8E6E1; padding: 20px 18px">
+<p style="margin: 0; font-family: 'Noto Serif KR', serif; font-size: 28px">1993</p>
+<p style="margin: 4px 0 0; font-size: 14px; color: #52575B">여의도 개원</p>
+</div>
+<div style="background: #E8E6E1; padding: 20px 18px">
+<p style="margin: 0; font-family: 'Noto Serif KR', serif; font-size: 28px">30년+</p>
+<p style="margin: 4px 0 0; font-size: 14px; color: #52575B">같은 자리, 같은 진료실</p>
+</div>
+<div style="background: #E8E6E1; padding: 20px 18px">
+<p style="margin: 0; font-family: 'Noto Serif KR', serif; font-size: 28px">대를 이어</p>
+<p style="margin: 4px 0 0; font-size: 14px; color: #52575B">가족이 이어온 진료</p>
+</div>
+</div>
+</div>
 <nav aria-label="주 메뉴" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; font-size: 15px">
 <a href="#about" style="text-decoration: none; color: #1C1F21">병원 소개</a>
 <a href="#dr-bae" style="text-decoration: none; color: #1C1F21">배민수 원장</a>
@@ -75,7 +163,14 @@ a{color:#26383A}a:hover{color:#1C1F21}
 <a href="#magazine" style="text-decoration: none; color: #1C1F21">매거진</a>
 <a href="Notice.dc.html" style="text-decoration: none; color: #1C1F21">공지사항</a>
 <a href="#visit" style="text-decoration: none; color: #1C1F21">내원 안내</a>
-<a href="English.dc.html" style="text-decoration: none; color: #52575B; font-size: 14px; letter-spacing: 0.06em">EN</a>
+<div class="wd-lang">
+<span class="wd-lang-btn" role="button" tabindex="0" aria-haspopup="true" aria-label="언어 선택 Language"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></span>
+<div class="wd-lang-panel"><div class="wd-lang-box">
+<a href="English.dc.html" class="wd-lang-item" lang="en" hreflang="en">ENG<small style="font-size: 11px; color: #8A9092">English</small></a>
+<span class="wd-lang-item wd-lang-soon" lang="zh">中文<small>준비 중</small></span>
+<span class="wd-lang-item wd-lang-soon" lang="ja">日本語<small>준비 중</small></span>
+</div></div>
+</div>
 <a href="https://booking.naver.com/booking/13/bizes/1126036" target="_blank" rel="noopener" style="text-decoration: none; background: {{accent}}; color: #FFFFFF; padding: 10px 20px; border-radius: 2px; font-size: 14px; font-weight: 500; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">진료 예약</a>
 </nav>
 </div>
