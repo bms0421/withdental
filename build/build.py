@@ -26,6 +26,9 @@ PAGES = {
     'Privacy': dict(path='privacy/', lang='ko',
         title='개인정보처리방침 | 위드치과보철과',
         desc='위드치과보철과 개인정보처리방침입니다.'),
+    'Invisalign': dict(path='treatments/invisalign/', lang='ko',
+        title='인비절라인 투명교정 | 여의도 위드치과보철과 (치과교정과 전문의 진료)',
+        desc='여의도 위드치과보철과의 인비절라인 투명교정. 치과교정과 전문의가 진단부터 유지 관리까지 직접 계획하고, 보철 치료가 필요하면 치과보철과 전문의와 함께 최종 모습을 설계합니다. 착용 시간, 치료 과정, 브라켓 교정과의 비교, 자주 묻는 질문.'),
     'Fees': dict(path='fees/', lang='ko', noindex=True,
         title='비급여 진료비 안내 | 위드치과보철과',
         desc='위드치과보철과 비급여 진료비 안내입니다.'),
@@ -243,7 +246,7 @@ def main():
     rendered = json.loads(res.stdout)
     for (name, (cfg, helmet, body, logic, props, prefix, out_dir)) in pages.items():
         r = rendered[out_dir + 'index.html']
-        faq = r['faq'] if name == 'Main' else None
+        faq = r['faq'] or None
         open(out_dir + 'index.html', 'w').write(page_html(name, cfg, helmet, body, logic, props, prefix, r['html'], faq))
 
     open(OUT + '/CNAME', 'w').write('withdental.kr\n')

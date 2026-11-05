@@ -47,7 +47,7 @@ const server = http.createServer((req, res) => {
     await page.goto('http://localhost:' + port + rel, { waitUntil: 'domcontentloaded' });
     const data = await page.evaluate(() => {
       const r = document.getElementById('wd-root');
-      const faq = Array.from(document.querySelectorAll('#faq details')).map((d) => {
+      const faq = Array.from(document.querySelectorAll('#faq details, .inv-faq details')).map((d) => {
         const q = d.querySelector('summary');
         const qt = q ? q.textContent.replace(/\s+/g, ' ').trim() : '';
         const clone = d.cloneNode(true);
