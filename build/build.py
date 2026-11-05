@@ -29,6 +29,9 @@ PAGES = {
     'Invisalign': dict(path='treatments/invisalign/', lang='ko',
         title='인비절라인 투명교정 | 여의도 위드치과보철과 (치과교정과 전문의 진료)',
         desc='여의도 위드치과보철과의 인비절라인 투명교정. 치과교정과 전문의가 진단부터 유지 관리까지 직접 계획하고, 보철 치료가 필요하면 치과보철과 전문의와 함께 최종 모습을 설계합니다. 착용 시간, 치료 과정, 브라켓 교정과의 비교, 자주 묻는 질문.'),
+    'Restorative': dict(path='treatments/conservative-restoration/', lang='ko',
+        title='자연치아 보존 수복 (레진·인레이·온레이·오버레이) | 여의도 위드치과보철과',
+        desc='여의도 위드치과보철과의 자연치아 보존 수복. 충치와 손상 범위에 따라 레진 빌드업, 인레이, 온레이, 오버레이 순으로 가장 적게 깎는 방법을 고르고, 러버댐 격리 하에 접착 기반의 생체모방 치료(Biomimetic)로 진행합니다. 치과보철과 전문의 배민수 원장 진료.'),
     'Fees': dict(path='fees/', lang='ko', noindex=True,
         title='비급여 진료비 안내 | 위드치과보철과',
         desc='위드치과보철과 비급여 진료비 안내입니다.'),
@@ -105,7 +108,6 @@ def launch_edits(name, body, logic):
     """Changes for the live site: drop mockup-only notes and unfinished parts."""
     if name == 'Main':
         # adhesive-overlay detail page is not finished yet: point its card to the related Q&A
-        body = body.replace('href="Overlay.dc.html"', 'href="#faq"')
         # real map instead of the placeholder
         body = body.replace(
             '<span style="font-size: 13px; color: #52575B">[네이버 지도 — 실제 사이트에서 지도 API로 연결]</span>',
