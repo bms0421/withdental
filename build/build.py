@@ -138,6 +138,7 @@ def head_meta(name, cfg, prefix, faq=None):
         '<link rel="apple-touch-icon" href="%sassets/img/apple-touch-icon.png">' % prefix,
         '<meta name="theme-color" content="#E8E6E1">',
         '<meta name="google-site-verification" content="vGXlTegwWYiN8vdYWh1z_Od-bCP5DrzpgO15uxwzsSw">',
+        '<meta name="naver-site-verification" content="ce676631b4a5442c82d37e354cb9b1e44ef7202b">',
         '<meta property="og:type" content="website">',
         '<meta property="og:site_name" content="위드치과보철과 WITH Dental Clinic">',
         '<meta property="og:title" content="%s">' % html.escape(cfg['title']),
