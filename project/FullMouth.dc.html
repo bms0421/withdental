@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>전악보철 · 교합재건</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;family=Noto+Serif+KR:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E8E6E1}
+a{color:#26383A}a:hover{color:#1C1F21}
+.inv-card{transition:background-color .6s ease}
+.inv-card:hover{background-color:#E8E5DF !important}
+.inv-faq summary{cursor:pointer;list-style:none}
+.inv-faq summary::-webkit-details-marker{display:none}
+.inv-faq summary .inv-plus{transition:transform .3s ease}
+.inv-faq details[open] summary .inv-plus{transform:rotate(45deg)}
+.wd-dd{position:relative}
+.wd-dd-panel{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);margin-top:14px;width:520px;display:grid;grid-template-columns:1fr 1fr;gap:4px 32px;padding:24px 28px 18px;background:#F1EFEB;border:1px solid #D2CEC6;box-shadow:0 12px 32px rgba(28,31,33,0.12);opacity:0;visibility:hidden;transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:20}
+.wd-dd-panel::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.wd-dd:hover .wd-dd-panel,.wd-dd:focus-within .wd-dd-panel{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.wd-dd-head{margin:0 0 8px;font-size:12px;letter-spacing:.16em;color:#26383A;padding-bottom:8px;border-bottom:1px solid #D2CEC6}
+.wd-dd-list{list-style:none;margin:0;padding:0}
+.wd-dd-item{display:flex;gap:10px;align-items:baseline;padding:7px 0;color:#1C1F21 !important;text-decoration:none;font-size:14.5px;transition:color .2s}
+.wd-dd-item:hover{color:#26383A !important;text-decoration:underline;text-underline-offset:3px}
+.wd-dd-no{font-family:'Noto Serif KR',serif;font-size:12px;color:#8A9092;min-width:18px}
+.wd-dd-sub{list-style:none;margin:-3px 0 4px;padding:0 0 0 28px}
+.wd-dd-subitem{display:block;padding:3px 0;font-size:13px;color:#52575B !important;text-decoration:none}
+.wd-dd-subitem::before{content:"– ";color:#8A9092}
+.wd-dd-subitem:hover{color:#26383A !important;text-decoration:underline;text-underline-offset:3px}
+.wd-dd-all{grid-column:1 / -1;margin-top:10px;padding-top:12px;border-top:1px solid #D2CEC6;font-size:13px;color:#52575B !important;text-decoration:none}
+@media (max-width:760px){.wd-dd-panel{display:none}}
+.wd-dd-item[aria-current="page"]{font-weight:700}
+.wd-qi{transition:background-color .35s ease,border-color .35s ease}
+.wd-qi:hover,.wd-qi:focus-visible{background-color:rgba(38,56,58,0.85) !important;border-color:rgba(241,239,235,0.6) !important}
+.wd-tip{position:absolute;right:calc(100% + 10px);top:50%;transform:translate(6px,-50%);white-space:nowrap;padding:6px 12px;border-radius:999px;background:rgba(28,34,36,0.85);color:#F1EFEB;font-size:13px;line-height:1.4;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+.wd-qi:hover .wd-tip,.wd-qi:focus-visible .wd-tip{opacity:1;transform:translate(0,-50%)}
+@media (max-width: 640px){.wd-quick{right:10px !important;bottom:16px !important}}
+.wd-lang{position:relative;display:inline-flex;align-items:center}
+.wd-lang-btn{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;color:#52575B;cursor:pointer;border-radius:50%;outline:none;transition:color .2s}
+.wd-lang:hover .wd-lang-btn,.wd-lang:focus-within .wd-lang-btn{color:#1C1F21}
+.wd-lang-btn:focus-visible{box-shadow:0 0 0 2px #26383A}
+.wd-lang-panel{position:absolute;top:100%;right:-14px;padding-top:10px;display:none;z-index:40}
+.wd-lang:hover .wd-lang-panel,.wd-lang:focus-within .wd-lang-panel{display:block}
+.wd-lang-box{background:#F1EFEB;border:1px solid #D2CEC6;box-shadow:0 10px 28px rgba(28,31,33,.10);padding:6px 0;min-width:150px}
+.wd-lang-item{display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:9px 18px;font-size:14px;line-height:1.4;color:#1C1F21 !important;text-decoration:none;white-space:nowrap}
+a.wd-lang-item:hover,a.wd-lang-item:focus-visible{background:#E8E6E1}
+.wd-lang-soon{color:#8A9092 !important;cursor:default}
+.wd-lang-m{display:none}
+.wd-lang-soon small{font-size:11px;letter-spacing:.02em}
+</style>
+</helmet>
+<div style="font-family: 'Noto Sans KR', system-ui, sans-serif; color: #1C1F21; background: #E8E6E1; width: 100%; min-height: 100vh; line-height: 1.7; word-break: keep-all">
+
+<header style="background: rgba(232,230,225,0.97); border-bottom: 1px solid #D2CEC6">
+<div style="max-width: 1240px; margin: 0 auto; padding: 18px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Main.dc.html" aria-label="위드치과보철과 홈" style="text-decoration: none; color: #1C1F21; display: flex; align-items: center; gap: 16px">
+<img src="/_blob/75fad8257fba8615a8bd1a7ce1eea8b6" alt="WITH DENTAL CLINIC 로고" style="height: 48px; width: auto; display: block">
+<span style="font-size: 14px; color: #52575B; letter-spacing: 0.04em; padding-left: 16px; border-left: 1px solid #D2CEC6">위드치과보철과</span>
+</a>
+<div class="wd-lang wd-lang-m">
+<span class="wd-lang-btn" role="button" tabindex="0" aria-haspopup="true" aria-label="언어 선택 Language"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></span>
+<div class="wd-lang-panel"><div class="wd-lang-box">
+<a href="English.dc.html" class="wd-lang-item" lang="en" hreflang="en">ENG<small style="font-size: 11px; color: #8A9092">English</small></a>
+<a href="Chinese.dc.html" class="wd-lang-item" lang="zh-Hans" hreflang="zh-Hans">简体中文<small style="font-size: 11px; color: #8A9092">Simplified</small></a>
+<a href="ChineseTraditional.dc.html" class="wd-lang-item" lang="zh-Hant" hreflang="zh-Hant">繁體中文<small style="font-size: 11px; color: #8A9092">Traditional</small></a>
+<span class="wd-lang-item wd-lang-soon" lang="ja">日本語<small>준비 중</small></span>
+</div></div>
+</div>
+<nav aria-label="주 메뉴" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; font-size: 15px">
+<a href="Main.dc.html#about" style="text-decoration: none; color: #1C1F21">병원 소개</a>
+<a href="Main.dc.html#dr-bae" style="text-decoration: none; color: #1C1F21">배민수 원장</a>
+<a href="Main.dc.html#dr-kang" style="text-decoration: none; color: #1C1F21">강재연 원장</a>
+<div class="wd-dd">
+<a href="Main.dc.html#care" class="wd-dd-trigger" aria-haspopup="true" style="text-decoration: none; color: #1C1F21; font-weight: 700; display: inline-flex; align-items: center; gap: 5px; border-bottom: 1px solid #1C1F21">중점 진료 영역<svg aria-hidden="true" width="10" height="10" viewBox="0 0 10 10" style="display: block"><path d="M2 3.5 L5 6.5 L8 3.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+<div class="wd-dd-panel">
+<div><p class="wd-dd-head">보철 · 치주</p><ul class="wd-dd-list"><li><a href="Restorative.dc.html" class="wd-dd-item"><span class="wd-dd-no">01</span>자연치아 보존 수복</a></li><li><a href="Esthetic.dc.html" class="wd-dd-item"><span class="wd-dd-no">02</span>심미보철치료</a></li><li><a href="Perio.dc.html" class="wd-dd-item"><span class="wd-dd-no">03</span>미세치주성형</a></li><li><a href="FullMouth.dc.html" class="wd-dd-item" aria-current="page"><span class="wd-dd-no">04</span>전악보철 · 교합재건</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">05</span>보철치료 · All-on-X</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">06</span>임플란트</a></li></ul></div>
+<div><p class="wd-dd-head">교정</p><ul class="wd-dd-list"><li><a href="Brackets.dc.html" class="wd-dd-item"><span class="wd-dd-no">07</span>브라켓 교정</a></li><li><a href="Invisalign.dc.html" class="wd-dd-item"><span class="wd-dd-no">08</span>투명교정</a><ul class="wd-dd-sub"><li><a href="Invisalign.dc.html" class="wd-dd-subitem">인비절라인</a></li><li><a href="Invisalign.dc.html#angel" class="wd-dd-subitem">앤젤얼라이너</a></li></ul></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">09</span>부분교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">10</span>소아 예방교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">11</span>수술교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">12</span>가철성 교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">13</span>교정 재치료</a></li></ul></div>
+<a href="Main.dc.html#care" class="wd-dd-all">진료 영역 전체 보기 →</a>
+</div>
+</div>
+<a href="Main.dc.html#faq" style="text-decoration: none; color: #1C1F21">치료 전 Q&amp;A</a>
+<a href="Notice.dc.html" style="text-decoration: none; color: #1C1F21">공지사항</a>
+<a href="Main.dc.html#visit" style="text-decoration: none; color: #1C1F21">내원 안내</a>
+<div class="wd-lang">
+<span class="wd-lang-btn" role="button" tabindex="0" aria-haspopup="true" aria-label="언어 선택 Language"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"></path></svg></span>
+<div class="wd-lang-panel"><div class="wd-lang-box">
+<a href="English.dc.html" class="wd-lang-item" lang="en" hreflang="en">ENG<small style="font-size: 11px; color: #8A9092">English</small></a>
+<a href="Chinese.dc.html" class="wd-lang-item" lang="zh-Hans" hreflang="zh-Hans">简体中文<small style="font-size: 11px; color: #8A9092">Simplified</small></a>
+<a href="ChineseTraditional.dc.html" class="wd-lang-item" lang="zh-Hant" hreflang="zh-Hant">繁體中文<small style="font-size: 11px; color: #8A9092">Traditional</small></a>
+<span class="wd-lang-item wd-lang-soon" lang="ja">日本語<small>준비 중</small></span>
+</div></div>
+</div>
+<a href="https://booking.naver.com/booking/13/bizes/1126036" target="_blank" rel="noopener" style="text-decoration: none; background: #26383A; color: #FFFFFF; padding: 10px 20px; border-radius: 2px; font-size: 14px; font-weight: 500; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">진료 예약</a>
+</nav>
+</div>
+</header>
+
+<!-- Hero -->
+<section style="background: #1C2224; color: #E8E6E1">
+<div style="max-width: 1240px; margin: 0 auto; padding: 56px 32px 0; box-sizing: border-box">
+<nav aria-label="현재 위치" style="font-size: 13px; color: #8E9599; display: flex; flex-wrap: wrap; gap: 8px">
+<a href="Main.dc.html" style="color: #8E9599; text-decoration: none">홈</a><span aria-hidden="true">/</span><a href="Main.dc.html#care" style="color: #8E9599; text-decoration: none">중점 진료 영역</a><span aria-hidden="true">/</span><span style="color: #BFC4C6">전악보철 · 교합재건</span>
+</nav>
+<div style="display: flex; flex-wrap: wrap; gap: 48px 72px; align-items: flex-end">
+<div style="flex: 1 1 520px; min-width: 0; padding: 72px 0 96px">
+<p style="margin: 0 0 16px; font-size: 13px; letter-spacing: 0.24em; color: #9FB0AF">PROSTHODONTICS · 04 · FULL-MOUTH REHABILITATION</p>
+<h1 style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.3">전악보철 · 교합재건<span style="display: block; margin-top: 10px; font-family: 'Noto Sans KR', sans-serif; font-size: 18px; font-weight: 400; letter-spacing: 0.04em; color: #9FB0AF">보철 재치료</span></h1>
+<p style="margin: 20px 0 0; font-family: 'Noto Serif KR', serif; font-size: clamp(20px, 2vw, 24px); color: #E8E6E1">치아 하나가 아니라, 맞물림 전체를 다시 세웁니다.</p>
+<p style="margin: 16px 0 0; max-width: 580px; font-size: 18px; color: #BFC4C6">많이 닳았거나 여러 개가 무너진 치아, 오래되고 잘 맞지 않는 보철물은 하나씩 고쳐서는 오래가기 어렵습니다. 치아의 높이와 위아래 맞물림, 턱의 편안함까지 처음부터 다시 설계하고, 임시 보철로 충분히 확인한 뒤 최종 보철로 옮깁니다.</p>
+<div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#reserve" style="text-decoration: none; background: #E8E6E1; color: #1C1F21; padding: 14px 26px; font-size: 15px; font-weight: 500; border-radius: 2px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">상담 예약</a>
+<a href="#signs" style="text-decoration: none; border: 1px solid #6E777B; color: #E8E6E1; padding: 14px 26px; font-size: 15px; border-radius: 2px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">이런 증상이 있다면</a>
+</div>
+</div>
+<figure style="flex: 0 1 300px; min-width: 0; margin: 0; align-self: flex-end">
+<img src="/_blob/a27caac12fac761510103b3ea61bc6fa" alt="배민수 원장" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block">
+<figcaption style="background: #26383A; padding: 16px 20px; font-size: 14px; color: #BFC4C6"><strong style="display: block; color: #E8E6E1; font-weight: 500; font-size: 16px">담당 · 배민수 원장</strong>치과보철과 전문의 · 치의학박사<br>대한턱관절교합학회 인정의</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<main style="max-width: 1040px; margin: 0 auto; padding: 0 32px 120px; box-sizing: border-box">
+
+<!-- Signs -->
+<section id="signs" style="margin-top: 72px">
+<p style="margin: 0 0 12px; font-size: 13px; letter-spacing: 0.24em; color: #26383A">SIGNS</p>
+<h2 style="margin: 0 0 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: 32px; line-height: 1.4">이런 경우라면<br>전체 교합을 살펴봐야 합니다</h2>
+<div style="margin-top: 20px; max-width: 760px; display: flex; flex-direction: column; gap: 14px; font-size: 17px; color: #42474A">
+<p style="margin: 0">치아는 서로 맞물려 힘을 나눠 받습니다. 그래서 몇 개의 치아가 무너지면 나머지 치아가 그 힘을 대신 받게 되고, 시간이 지나면 문제가 입안 전체로 번집니다. 아래와 같은 경우라면 불편한 치아 하나만이 아니라 맞물림 전체를 함께 확인하는 것이 좋습니다.</p>
+</div>
+<ul style="margin: 32px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 0 40px; border-top: 1px solid #1C1F21">
+<li style="padding: 16px 0; border-bottom: 1px solid #D2CEC6; font-size: 16px">치아가 전반적으로 많이 닳아 짧아졌다</li>
+<li style="padding: 16px 0; border-bottom: 1px solid #D2CEC6; font-size: 16px">오래된 보철물이 여러 개이고, 자꾸 깨지거나 빠진다</li>
+<li style="padding: 16px 0; border-bottom: 1px solid #D2CEC6; font-size: 16px">어금니가 없어 앞니로 씹게 된다</li>
+<li style="padding: 16px 0; border-bottom: 1px solid #D2CEC6; font-size: 16px">앞니 사이가 점점 벌어지거나 앞으로 나온다</li>
+<li style="padding: 16px 0; border-bottom: 1px solid #D2CEC6; font-size: 16px">씹을 때 편한 자리가 없고, 턱이 쉽게 피곤하다</li>
+<li style="padding: 16px 0; border-bottom: 1px solid #D2CEC6; font-size: 16px">이를 갈거나 꽉 무는 습관이 있다</li>
+</ul>
+</section>
+
+<!-- Why -->
+<section style="margin-top: 96px">
+<p style="margin: 0 0 12px; font-size: 13px; letter-spacing: 0.24em; color: #26383A">WHY IT MATTERS</p>
+<h2 style="margin: 0 0 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: 32px; line-height: 1.4">무너진 맞물림은<br>저절로 돌아오지 않습니다</h2>
+<div style="margin-top: 20px; max-width: 760px; display: flex; flex-direction: column; gap: 14px; font-size: 17px; color: #42474A">
+<p style="margin: 0">어금니를 잃거나 치아가 많이 닳으면, 위아래 치아가 물리는 높이(수직고경)가 조금씩 낮아집니다. 남은 치아에 힘이 몰리면서 더 빨리 닳고, 앞니가 밀려 벌어지기도 합니다. 얼굴 아래쪽이 짧아 보이거나 입가 주름이 깊어지는 것도 이런 변화와 관련이 있습니다.</p>
+<p style="margin: 0">이 상태에서 문제가 된 치아만 하나씩 씌우면, 낮아진 높이와 틀어진 맞물림을 그대로 따라가게 되어 <strong style="color: #1C1F21; font-weight: 500">새 보철물도 같은 이유로 다시 깨지거나 닳기 쉽습니다.</strong> 그래서 전악보철은 개별 치아가 아니라 맞물림 전체를 먼저 진단하는 데서 시작합니다.</p>
+</div>
+<div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: #D2CEC6; border: 1px solid #D2CEC6">
+<div class="inv-card" style="background: #F1EFEB; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Noto Serif KR', serif; font-size: 14px; color: #52575B">01</span>
+<span style="font-size: 19px; font-weight: 500">물었을 때의 높이</span>
+<span style="font-size: 15px; color: #42474A">치아가 닳거나 빠져 낮아진 높이를 얼굴 비율과 턱의 편안함에 맞춰 다시 정합니다.</span>
+</div>
+<div class="inv-card" style="background: #F1EFEB; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Noto Serif KR', serif; font-size: 14px; color: #52575B">02</span>
+<span style="font-size: 19px; font-weight: 500">씹는 면의 기울기</span>
+<span style="font-size: 15px; color: #42474A">위아래 치아가 만나는 면을 고르게 정리해, 힘이 한쪽으로 쏠리지 않게 합니다.</span>
+</div>
+<div class="inv-card" style="background: #F1EFEB; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Noto Serif KR', serif; font-size: 14px; color: #52575B">03</span>
+<span style="font-size: 19px; font-weight: 500">앞니의 안내</span>
+<span style="font-size: 15px; color: #42474A">턱을 움직일 때 앞니와 송곳니가 길을 잡아 주어, 어금니에 무리한 힘이 걸리지 않게 합니다.</span>
+</div>
+<div class="inv-card" style="background: #F1EFEB; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Noto Serif KR', serif; font-size: 14px; color: #52575B">04</span>
+<span style="font-size: 19px; font-weight: 500">편안한 턱 위치</span>
+<span style="font-size: 15px; color: #42474A">턱관절과 근육이 편안한 위치에서 위아래 치아가 고르게 닿도록 맞춥니다.</span>
+</div>
+</div>
+</section>
+
+<!-- Principle -->
+<section style="margin-top: 96px; background: #1C2224; color: #E8E6E1; padding: 48px 44px">
+<p style="margin: 0 0 12px; font-size: 13px; letter-spacing: 0.24em; color: #9FB0AF">OUR PRINCIPLE</p>
+<h2 style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: 28px; line-height: 1.45">서두르지 않고,<br>확인하면서 단계를 밟아 갑니다</h2>
+<div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px 40px">
+<div style="border-top: 1px solid #3A4144; padding-top: 18px">
+<p style="margin: 0; font-size: 17px; font-weight: 500">깎기 전에 먼저 보여드립니다</p>
+<p style="margin: 8px 0 0; font-size: 15px; color: #BFC4C6">진단 왁스업과 목업으로 새 치아의 높이와 모양을 미리 만들어, 깎기 전에 입안에서 직접 확인합니다.</p>
+</div>
+<div style="border-top: 1px solid #3A4144; padding-top: 18px">
+<p style="margin: 0; font-size: 17px; font-weight: 500">임시 보철로 충분히 적응합니다</p>
+<p style="margin: 8px 0 0; font-size: 15px; color: #BFC4C6">새 높이와 맞물림을 임시 보철로 먼저 써 보며 씹기, 발음, 턱의 편안함을 확인하고 필요한 만큼 다듬습니다.</p>
+</div>
+<div style="border-top: 1px solid #3A4144; padding-top: 18px">
+<p style="margin: 0; font-size: 17px; font-weight: 500">확인된 그대로 옮깁니다</p>
+<p style="margin: 8px 0 0; font-size: 15px; color: #BFC4C6">임시 보철에서 검증한 높이와 모양을 최종 보철에 그대로 옮겨, 예측 가능한 결과를 만듭니다.</p>
+</div>
+</div>
+</section>
+
+<!-- Process -->
+<section style="margin-top: 96px">
+<p style="margin: 0 0 12px; font-size: 13px; letter-spacing: 0.24em; color: #26383A">PROCESS</p>
+<h2 style="margin: 0 0 36px; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: 32px; line-height: 1.4">치료 과정</h2>
+<ol style="list-style: none; margin: 0; padding: 0; border-top: 1px solid #1C1F21">
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">01</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">정밀 검사</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">구강 사진과 얼굴 사진, 방사선 사진, 구강 스캔으로 치아와 잇몸, 뼈 상태를 확인합니다. 턱관절과 씹는 근육, 턱의 움직임도 함께 살핍니다.</p></div></li>
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">02</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">교합 분석과 진단 왁스업</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">위아래 치아 모형을 턱의 움직임을 재현하는 장치(교합기)에 옮겨 맞물림을 분석하고, 새 치아의 높이와 모양을 왁스로 먼저 만들어 봅니다.</p></div></li>
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">03</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">치료 계획 설명</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">목업으로 새 모양을 입안에서 미리 보여드리고, 치료 순서와 기간, 비용, 다른 선택지까지 함께 설명합니다.</p></div></li>
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">04</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">기초 치료와 협진</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">충치, 신경치료, 잇몸 치료를 먼저 마치고, 필요하면 교정이나 임플란트로 치아 위치와 지지를 바로잡습니다.</p></div></li>
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">05</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">임시 보철로 적응 기간</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">새 높이와 맞물림을 담은 임시 보철을 일정 기간 사용하며, 씹기와 발음, 턱의 편안함을 확인하고 조정합니다.</p></div></li>
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">06</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">최종 보철</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">임시 보철에서 확인한 높이와 모양을 기준으로 최종 보철을 제작해, 맞물림을 정밀하게 맞춰 마무리합니다.</p></div></li>
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">07</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">유지 관리</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">이갈이나 이 악물기가 있다면 보호 장치(나이트가드)를 만들어 드리고, <strong style="color: #1C1F21; font-weight: 500">정기적으로 맞물림과 보철 상태를 확인합니다.</strong></p></div></li>
+</ol>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 20px 40px; align-items: center; background: #F1EFEB; border: 1px solid #D2CEC6; padding: 32px 36px">
+<p style="margin: 0; flex: 0 0 auto; font-family: 'Noto Serif KR', serif; font-size: 40px; line-height: 1; color: #26383A">1993</p>
+<div style="flex: 1 1 420px; min-width: 0">
+<p style="margin: 0; font-size: 18px; font-weight: 500">오래 쓰는 보철은, 오래 지켜보는 곳에서</p>
+<p style="margin: 8px 0 0; font-size: 15px; color: #42474A">전악보철은 끝난 뒤의 관리가 결과만큼 중요한 치료입니다. 위드치과보철과는 1993년부터 지금의 자리에서 가족이 대를 이어 진료하고 있습니다. 같은 자리에서, 같은 기록을 바탕으로 오래도록 책임지고 관리해 드리겠습니다.</p>
+</div>
+</div>
+</section>
+
+<!-- Re-treatment -->
+<section id="retreatment" style="margin-top: 96px">
+<p style="margin: 0 0 12px; font-size: 13px; letter-spacing: 0.24em; color: #26383A">RE-TREATMENT</p>
+<h2 style="margin: 0 0 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: 32px; line-height: 1.4">보철 재치료는<br>실패한 원인을 찾는 데서 시작합니다</h2>
+<div style="margin-top: 20px; max-width: 760px; display: flex; flex-direction: column; gap: 14px; font-size: 17px; color: #42474A">
+<p style="margin: 0">보철물이 자꾸 깨지거나 빠지고, 잇몸이 붓거나 안쪽에 충치가 생겼다면 겉의 보철물만 새로 바꿔서는 같은 문제가 반복되기 쉽습니다. 무너진 이유가 맞물림인지, 이갈이 같은 습관인지, 보철물 가장자리의 충치나 잇몸 문제인지 먼저 찾습니다.</p>
+<p style="margin: 0">원인을 바로잡은 뒤에 다시 만들어야 <strong style="color: #1C1F21; font-weight: 500">새 보철물이 같은 이유로 실패하지 않습니다.</strong> 원인이 한두 개 치아에 그친다면 그 부분만 다시 치료하고, 맞물림 전체가 무너졌다면 전악보철로 계획합니다.</p>
+</div>
+</section>
+
+<!-- Team -->
+<section style="margin-top: 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+<div style="background: #F1EFEB; border: 1px solid #D2CEC6; padding: 30px 30px">
+<h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 500">교정과 함께</h3>
+<p style="margin: 0; font-size: 15px; color: #42474A">기울거나 벌어진 치아는 교정으로 먼저 위치를 바로잡으면 깎는 양을 줄일 수 있습니다. 치과교정과 전문의와 처음부터 함께 계획합니다.</p>
+</div>
+<div style="background: #F1EFEB; border: 1px solid #D2CEC6; padding: 30px 30px">
+<h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 500">잇몸 · 임플란트와 함께</h3>
+<p style="margin: 0; font-size: 15px; color: #42474A">잇몸 상태를 먼저 안정시키고, 빠진 어금니는 임플란트로 지지를 되찾아 앞니에 몰리던 힘을 나눕니다. 필요하면 <a href="Perio.dc.html" style="color: #26383A">미세치주성형</a>을 함께 진행합니다.</p>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="inv-faq" style="margin-top: 96px">
+<p style="margin: 0 0 12px; font-size: 13px; letter-spacing: 0.24em; color: #26383A">FAQ</p>
+<h2 style="margin: 0 0 28px; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: 32px; line-height: 1.4">자주 묻는 질문</h2>
+<div style="border-top: 1px solid #1C1F21">
+<details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
+<summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">치료 기간은 얼마나 걸리나요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
+<p style="margin: 12px 0 0; font-size: 16px; color: #42474A">치아 상태와 필요한 기초 치료, 임시 보철로 적응하는 기간에 따라 다르며 보통 수개월 이상 걸립니다. 서둘러 마무리하기보다 단계마다 확인하며 진행하는 것이 오래가는 결과로 이어집니다. 정밀 검사 후 개인별 일정을 안내해 드립니다.</p>
+</details>
+<details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
+<summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">모든 치아를 다 씌워야 하나요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
+<p style="margin: 12px 0 0; font-size: 16px; color: #42474A">아닙니다. 맞물림을 다시 세우는 데 꼭 필요한 치아만 치료하며, 건강한 치아는 최대한 그대로 둡니다. 손상 정도에 따라 크라운뿐 아니라 오버레이나 라미네이트처럼 덜 깎는 방법도 함께 사용합니다.</p>
+</details>
+<details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
+<summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">치아 높이를 올리면 턱이 아프지 않나요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
+<p style="margin: 12px 0 0; font-size: 16px; color: #42474A">그래서 바로 최종 보철을 하지 않고, 새 높이를 담은 임시 보철로 충분히 적응하는 기간을 둡니다. 이 기간 동안 턱관절과 근육, 씹기와 발음이 편안한지 확인하고, 필요하면 조정한 뒤 최종 보철로 옮깁니다.</p>
+</details>
+<details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
+<summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">한 번에 모두 치료하나요, 나눠서 하나요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
+<p style="margin: 12px 0 0; font-size: 16px; color: #42474A">입안 상태와 생활 일정에 따라 한 번에 진행하기도 하고, 부위를 나눠 단계적으로 진행하기도 합니다. 어느 쪽이든 처음에 정한 전체 계획을 기준으로 맞물림이 어긋나지 않게 진행합니다.</p>
+</details>
+<details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
+<summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">이를 갈거나 꽉 무는 습관이 있어도 괜찮나요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
+<p style="margin: 12px 0 0; font-size: 16px; color: #42474A">이갈이나 이 악물기는 보철물이 깨지는 흔한 원인이라 진단 단계에서 꼭 확인합니다. 습관이 있다면 재료와 설계를 그에 맞게 정하고, 치료 후에는 잘 때 끼우는 보호 장치(나이트가드)를 권해 드립니다.</p>
+</details>
+<details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
+<summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">오래 쓰려면 무엇이 중요한가요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
+<p style="margin: 12px 0 0; font-size: 16px; color: #42474A">정기 검진에서 맞물림과 보철물, 잇몸 상태를 확인하는 것이 가장 중요합니다. 맞물림은 시간이 지나며 조금씩 달라질 수 있어, 작은 변화를 일찍 바로잡으면 보철물을 훨씬 오래 쓸 수 있습니다.</p>
+</details>
+</div>
+</section>
+
+<!-- Summary (GEO) -->
+<section aria-labelledby="fm-sum" style="margin-top: 96px; background: #F1EFEB; border: 1px solid #D2CEC6; padding: 36px 40px">
+<h2 id="fm-sum" style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.2em; color: #26383A; font-weight: 500">한눈에 보기</h2>
+<dl style="margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 14px 32px; font-size: 16px">
+<dt style="color: #52575B">어떤 치료인가요</dt><dd style="margin: 0">많이 닳았거나 여러 개가 무너진 치아의 높이와 맞물림을 전체적으로 다시 설계해 보철로 회복하는 치료</dd>
+<dt style="color: #52575B">이런 분께</dt><dd style="margin: 0">치아 마모가 심한 분, 오래된 보철물이 여러 개인 분, 어금니 상실로 맞물림이 무너진 분, 보철물이 반복해서 깨지는 분</dd>
+<dt style="color: #52575B">치료 원칙</dt><dd style="margin: 0">진단 왁스업과 목업으로 먼저 확인하고, 임시 보철로 충분히 적응한 뒤 최종 보철로 옮깁니다.</dd>
+<dt style="color: #52575B">치료 기간</dt><dd style="margin: 0">상태와 기초 치료, 적응 기간에 따라 다르며 진단 후 개인별로 안내합니다.</dd>
+<dt style="color: #52575B">담당 의료진</dt><dd style="margin: 0">배민수 원장 (치과보철과 전문의, 대한턱관절교합학회 인정의). 필요하면 교정 · 치주 전문의와 협진</dd>
+</dl>
+</section>
+
+<section id="reserve" style="margin-top: 96px; background: #26383A; color: #E8E6E1; padding: 48px 44px; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 360px; min-width: 0">
+<h2 style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: 26px; line-height: 1.45">무너진 맞물림,<br>처음부터 다시 정확하게 진단받아 보세요.</h2>
+<p style="margin: 10px 0 0; font-size: 15px; color: #BFC4C6">위드치과보철과는 예약제로 운영됩니다.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<a href="https://booking.naver.com/booking/13/bizes/1126036" target="_blank" rel="noopener" style="text-decoration: none; background: #E8E6E1; color: #1C1F21; padding: 14px 22px; font-size: 15px; font-weight: 500; border-radius: 2px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">네이버 예약</a>
+<a href="https://pf.kakao.com/_xjeAxmG/chat" target="_blank" rel="noopener" style="text-decoration: none; border: 1px solid #9FB0AF; color: #E8E6E1; padding: 14px 22px; font-size: 15px; border-radius: 2px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">카카오톡 상담</a>
+<a href="tel:+82-2-783-2825" style="text-decoration: none; border: 1px solid #9FB0AF; color: #E8E6E1; padding: 14px 22px; font-size: 15px; border-radius: 2px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">02-783-2825</a>
+</div>
+</section>
+
+</main>
+
+<footer style="background: #141719; color: #A3A9AC; font-size: 13px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px">
+<img src="/_blob/6dc4776958843cd5b9e73631e391be4e" alt="WITH DENTAL CLINIC 로고" style="height: 56px; width: auto; display: block; align-self: flex-start; margin-bottom: 10px">
+<span>위드치과보철과 · 대표 배민수 · Since 1993</span>
+<span>서울 영등포구 여의나루로 53-1 대오빌딩 4층 401호</span>
+<span>T) 02-783-2825, Fax) 02-783-2826</span>
+</div>
+</footer>
+
+<!-- Floating quick menu -->
+<nav aria-label="빠른 메뉴" class="wd-quick" style="position: fixed; z-index: 50; right: 18px; bottom: 24px; display: flex; flex-direction: column; gap: 8px">
+<a href="https://booking.naver.com/booking/13/bizes/1126036" target="_blank" rel="noopener" aria-label="네이버 예약 (새 창)" class="wd-qi" style="position: relative; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #F1EFEB; background: rgba(28, 34, 36, 0.32); border: 1px solid rgba(241, 239, 235, 0.28); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"></rect><path d="M3.5 10h17M8 3v4M16 3v4M9 14.5l2 2 4-4"></path></svg>
+<span aria-hidden="true" class="wd-tip">네이버 예약</span>
+</a>
+<a href="tel:+82-2-783-2825" aria-label="전화 문의 02-783-2825" class="wd-qi" style="position: relative; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #F1EFEB; background: rgba(28, 34, 36, 0.32); border: 1px solid rgba(241, 239, 235, 0.28); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"></path></svg>
+<span aria-hidden="true" class="wd-tip">전화 문의 02-783-2825</span>
+</a>
+<a href="https://pf.kakao.com/_xjeAxmG" target="_blank" rel="noopener" aria-label="카카오톡 채널 (새 창)" class="wd-qi" style="position: relative; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #F1EFEB; background: rgba(28, 34, 36, 0.32); border: 1px solid rgba(241, 239, 235, 0.28); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">
+<svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4C7 4 3 7.1 3 11c0 2.4 1.6 4.6 4 5.9L6.2 20l3.6-2.3c.7.1 1.4.2 2.2.2 5 0 9-3.1 9-7s-4-6.9-9-6.9z"></path></svg>
+<span aria-hidden="true" class="wd-tip">카카오톡 채널</span>
+</a>
+<a href="#top" aria-label="맨 위로" class="wd-qi" style="position: relative; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; color: #F1EFEB; background: rgba(28, 34, 36, 0.32); border: 1px solid rgba(241, 239, 235, 0.28); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">
+<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14l6-6 6 6"></path></svg>
+<span aria-hidden="true" class="wd-tip">맨 위로</span>
+</a>
+</nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6100}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
