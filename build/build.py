@@ -241,6 +241,8 @@ def page_html(name, cfg, helmet, body, logic, props, prefix, prerendered='', faq
 %s
 WD.boot(Component, %s);
 </script>
+<script src="https://wcs.pstatic.net/wcslog.js"></script>
+<script>if(!wcs_add) var wcs_add = {};wcs_add["wa"] = "1d640385a594510";if(window.wcs) { wcs_do(); }</script>
 </body>
 </html>
 ''' % (cfg['lang'], head_meta(name, cfg, prefix, faq), helmet.strip(), prefix, prerendered, body, prefix, logic.strip(), json.dumps(props))
