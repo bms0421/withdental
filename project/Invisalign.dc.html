@@ -29,6 +29,10 @@ a{color:#26383A}a:hover{color:#1C1F21}
 .wd-dd-item{display:flex;gap:10px;align-items:baseline;padding:7px 0;color:#1C1F21 !important;text-decoration:none;font-size:14.5px;transition:color .2s}
 .wd-dd-item:hover{color:#26383A !important;text-decoration:underline;text-underline-offset:3px}
 .wd-dd-no{font-family:'Noto Serif KR',serif;font-size:12px;color:#8A9092;min-width:18px}
+.wd-dd-sub{list-style:none;margin:-3px 0 4px;padding:0 0 0 28px}
+.wd-dd-subitem{display:block;padding:3px 0;font-size:13px;color:#52575B !important;text-decoration:none}
+.wd-dd-subitem::before{content:"– ";color:#8A9092}
+.wd-dd-subitem:hover{color:#26383A !important;text-decoration:underline;text-underline-offset:3px}
 .wd-dd-all{grid-column:1 / -1;margin-top:10px;padding-top:12px;border-top:1px solid #D2CEC6;font-size:13px;color:#52575B !important;text-decoration:none}
 @media (max-width:760px){.wd-dd-panel{display:none}}
 .wd-dd-item[aria-current="page"]{font-weight:700}
@@ -76,7 +80,7 @@ a.wd-lang-item:hover,a.wd-lang-item:focus-visible{background:#E8E6E1}
 <a href="Main.dc.html#care" class="wd-dd-trigger" aria-haspopup="true" style="text-decoration: none; color: #1C1F21; font-weight: 700; display: inline-flex; align-items: center; gap: 5px; border-bottom: 1px solid #1C1F21">중점 진료 영역<svg aria-hidden="true" width="10" height="10" viewBox="0 0 10 10" style="display: block"><path d="M2 3.5 L5 6.5 L8 3.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
 <div class="wd-dd-panel">
 <div><p class="wd-dd-head">보철 · 치주</p><ul class="wd-dd-list"><li><a href="Restorative.dc.html" class="wd-dd-item"><span class="wd-dd-no">01</span>자연치아 보존 수복</a></li><li><a href="Esthetic.dc.html" class="wd-dd-item"><span class="wd-dd-no">02</span>심미보철치료</a></li><li><a href="Perio.dc.html" class="wd-dd-item"><span class="wd-dd-no">03</span>미세치주성형</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">04</span>전악보철 · 교합재건</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">05</span>보철치료 · All-on-X</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">06</span>임플란트</a></li></ul></div>
-<div><p class="wd-dd-head">교정</p><ul class="wd-dd-list"><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">07</span>브라켓 교정</a></li><li><a href="Invisalign.dc.html" class="wd-dd-item" aria-current="page"><span class="wd-dd-no">08</span>투명교정(인비절라인, 앤젤얼라이너)</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">09</span>부분교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">10</span>소아 예방교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">11</span>수술교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">12</span>가철성 교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">13</span>교정 재치료</a></li></ul></div>
+<div><p class="wd-dd-head">교정</p><ul class="wd-dd-list"><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">07</span>브라켓 교정</a></li><li><a href="Invisalign.dc.html" class="wd-dd-item" aria-current="page"><span class="wd-dd-no">08</span>투명교정</a><ul class="wd-dd-sub"><li><a href="Invisalign.dc.html" class="wd-dd-subitem">인비절라인</a></li><li><a href="Invisalign.dc.html#angel" class="wd-dd-subitem">앤젤얼라이너</a></li></ul></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">09</span>부분교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">10</span>소아 예방교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">11</span>수술교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">12</span>가철성 교정</a></li><li><a href="Main.dc.html#care" class="wd-dd-item"><span class="wd-dd-no">13</span>교정 재치료</a></li></ul></div>
 <a href="Main.dc.html#care" class="wd-dd-all">진료 영역 전체 보기 →</a>
 </div>
 </div>
@@ -128,6 +132,7 @@ a.wd-lang-item:hover,a.wd-lang-item:focus-visible{background:#E8E6E1}
 <h2 id="inv-sum" style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.2em; color: #26383A; font-weight: 500">한눈에 보기</h2>
 <dl style="margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 14px 32px; font-size: 16px">
 <dt style="color: #52575B">어떤 치료인가요</dt><dd style="margin: 0">맞춤 제작한 투명 장치(얼라이너)를 단계별로 바꿔 끼우며 치아를 이동시키는 교정</dd>
+<dt style="color: #52575B">장치 종류</dt><dd style="margin: 0">인비절라인 · <a href="#angel" style="color: #26383A">앤젤얼라이너</a> (정밀 검사 후 맞는 장치를 함께 선택)</dd>
 <dt style="color: #52575B">착용 시간</dt><dd style="margin: 0">하루 20~22시간 착용 권장. 식사와 양치할 때만 뺍니다.</dd>
 <dt style="color: #52575B">장치 교체</dt><dd style="margin: 0">일반적으로 1~2주마다 다음 단계 장치로 교체</dd>
 <dt style="color: #52575B">치료 기간</dt><dd style="margin: 0">치아 상태와 이동 범위에 따라 다르며, 진단 후 개인별 예상 기간을 안내합니다.</dd>
@@ -256,6 +261,45 @@ a.wd-lang-item:hover,a.wd-lang-item:focus-visible{background:#E8E6E1}
 </div>
 </section>
 
+<!-- Angel Aligner -->
+<section id="angel" style="margin-top: 120px; padding-top: 72px; border-top: 1px solid #1C1F21">
+<p style="margin: 0 0 12px; font-size: 13px; letter-spacing: 0.24em; color: #26383A">ANGEL ALIGNER</p>
+<h2 style="margin: 0; font-family: 'Noto Serif KR', serif; font-weight: 500; font-size: 32px; line-height: 1.4">앤젤얼라이너 투명교정</h2>
+<div style="margin-top: 20px; max-width: 760px; display: flex; flex-direction: column; gap: 14px; font-size: 17px; color: #42474A">
+<p style="margin: 0">앤젤얼라이너(Angel Aligner)는 Angelalign Technology에서 만든 투명 교정 장치입니다. 맞춤 제작한 투명 장치를 단계별로 바꿔 끼우며 치아를 옮긴다는 <strong style="color: #1C1F21; font-weight: 500">기본 원리는 인비절라인과 같습니다.</strong> 전용 디지털 치료 계획 프로그램(iOrtho™)으로 치아가 움직일 순서와 방향을 미리 설계하고, 그 계획대로 제작된 장치를 차례로 착용합니다.</p>
+<p style="margin: 0">두 장치는 치료 계획 프로그램과 장치 소재, 제품 구성이 다릅니다. 어느 쪽이 더 낫다기보다, 정밀 검사 결과와 필요한 치아 이동, 비용과 일정을 함께 고려해 맞는 쪽을 고르시면 됩니다.</p>
+</div>
+<div style="margin-top: 36px; overflow-x: auto">
+<table style="width: 100%; min-width: 620px; border-collapse: collapse; font-size: 15px; background: #F1EFEB; border: 1px solid #D2CEC6">
+<caption style="text-align: left; padding: 0 0 12px; font-size: 13px; color: #52575B; caption-side: top">인비절라인과 앤젤얼라이너 비교</caption>
+<thead>
+<tr style="background: #26383A; color: #E8E6E1">
+<th scope="col" style="text-align: left; padding: 14px 20px; font-weight: 500; width: 22%">구분</th>
+<th scope="col" style="text-align: left; padding: 14px 20px; font-weight: 500">인비절라인</th>
+<th scope="col" style="text-align: left; padding: 14px 20px; font-weight: 500">앤젤얼라이너</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-top: 1px solid #D2CEC6"><th scope="row" style="text-align: left; padding: 14px 20px; font-weight: 500; color: #52575B">제조사</th><td style="padding: 14px 20px">Align Technology</td><td style="padding: 14px 20px">Angelalign Technology</td></tr>
+<tr style="border-top: 1px solid #D2CEC6"><th scope="row" style="text-align: left; padding: 14px 20px; font-weight: 500; color: #52575B">치료 계획 프로그램</th><td style="padding: 14px 20px">ClinCheck®</td><td style="padding: 14px 20px">iOrtho™</td></tr>
+<tr style="border-top: 1px solid #D2CEC6"><th scope="row" style="text-align: left; padding: 14px 20px; font-weight: 500; color: #52575B">장치 소재</th><td style="padding: 14px 20px">SmartTrack®</td><td style="padding: 14px 20px">MasterControl 계열 전용 소재</td></tr>
+<tr style="border-top: 1px solid #D2CEC6"><th scope="row" style="text-align: left; padding: 14px 20px; font-weight: 500; color: #52575B">치료 원리</th><td style="padding: 14px 20px">맞춤 장치를 단계별로 교체</td><td style="padding: 14px 20px">맞춤 장치를 단계별로 교체</td></tr>
+<tr style="border-top: 1px solid #D2CEC6"><th scope="row" style="text-align: left; padding: 14px 20px; font-weight: 500; color: #52575B">보조 장치</th><td style="padding: 14px 20px">필요하면 어태치먼트 · 고무줄 사용</td><td style="padding: 14px 20px">필요하면 어태치먼트 · 고무줄 사용</td></tr>
+<tr style="border-top: 1px solid #D2CEC6"><th scope="row" style="text-align: left; padding: 14px 20px; font-weight: 500; color: #52575B">착용 시간</th><td style="padding: 14px 20px">하루 20~22시간 권장</td><td style="padding: 14px 20px">하루 약 22시간 권장</td></tr>
+<tr style="border-top: 1px solid #D2CEC6"><th scope="row" style="text-align: left; padding: 14px 20px; font-weight: 500; color: #52575B">비용</th><td style="padding: 14px 20px">상대적으로 높은 편</td><td style="padding: 14px 20px">상대적으로 부담이 적은 편 (진단 후 정확히 안내)</td></tr>
+</tbody>
+</table>
+</div>
+<h3 style="margin: 56px 0 0; font-size: 20px; font-weight: 500">어떤 장치가 나에게 맞을까요?</h3>
+<p style="margin: 10px 0 0; max-width: 760px; font-size: 16px; color: #42474A">정밀 검사 후 아래 네 가지를 함께 살펴보고, 두 장치의 장단점을 비교해 설명드립니다.</p>
+<ol style="list-style: none; margin: 24px 0 0; padding: 0; border-top: 1px solid #1C1F21">
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">01</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">필요한 치아 이동의 종류와 양</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">치아를 얼마나, 어떤 방향으로 움직여야 하는지에 따라 계획과 장치 구성이 달라집니다.</p></div></li>
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">02</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">교합과 골격 상태</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">위아래 턱의 차이가 크다면 투명교정이 맞는지부터 먼저 검토합니다.</p></div></li>
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">03</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">보조 장치의 필요 여부</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">어태치먼트, 고무줄, 미니스크류 같은 보조 장치가 얼마나 필요한지 확인합니다.</p></div></li>
+<li style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 22px 0; border-bottom: 1px solid #D2CEC6"><span style="flex: 0 0 64px; font-family: 'Noto Serif KR', serif; font-size: 22px; color: #26383A">04</span><div style="flex: 1 1 400px; min-width: 0"><p style="margin: 0; font-size: 18px; font-weight: 500">비용 · 일정 · 착용 관리</p><p style="margin: 6px 0 0; font-size: 15px; color: #42474A">예산과 치료 일정, 하루 착용 시간을 꾸준히 지킬 수 있는지까지 함께 고려합니다.</p></div></li>
+</ol>
+</section>
+
 <!-- FAQ -->
 <section class="inv-faq" style="margin-top: 96px">
 <p style="margin: 0 0 12px; font-size: 13px; letter-spacing: 0.24em; color: #26383A">FAQ</p>
@@ -280,6 +324,18 @@ a.wd-lang-item:hover,a.wd-lang-item:focus-visible{background:#E8E6E1}
 <details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
 <summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">교정이 끝난 뒤에 라미네이트나 보철도 할 수 있나요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
 <p style="margin: 12px 0 0; font-size: 16px; color: #42474A">네. 위드치과보철과에서는 교정을 시작할 때부터 보철과 전문의가 함께 최종 모습을 계획합니다. 교정으로 치아 위치를 먼저 정리한 뒤 같은 진료실에서 보철로 마무리할 수 있습니다.</p>
+</details>
+<details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
+<summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">앤젤얼라이너와 인비절라인은 치료 범위가 다른가요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
+<p style="margin: 12px 0 0; font-size: 16px; color: #42474A">두 장치 모두 같은 원리로 치아를 옮기며, 발치 교정이나 교합 조정이 필요한 경우에도 쓰일 수 있습니다. 다만 치아 이동량이 크거나 뿌리 방향 조절이 많이 필요한 경우에는 장치 선택과 계획을 더 신중하게 검토하며, 필요하면 브라켓 교정을 함께 권해 드립니다.</p>
+</details>
+<details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
+<summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">치료 도중에 다른 장치로 바꿀 수 있나요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
+<p style="margin: 12px 0 0; font-size: 16px; color: #42474A">가능하지만 새로 스캔하고 치료 계획과 장치를 다시 만들어야 합니다. 바꾸는 이유와 추가 비용을 먼저 충분히 설명드린 뒤 결정합니다.</p>
+</details>
+<details style="border-bottom: 1px solid #D2CEC6; padding: 20px 0">
+<summary style="display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500">치료 계획 화면에서 본 모습 그대로 되나요?<span class="inv-plus" aria-hidden="true" style="font-size: 22px; color: #52575B; line-height: 1">+</span></summary>
+<p style="margin: 12px 0 0; font-size: 16px; color: #42474A">디지털 치료 계획(ClinCheck®, iOrtho™)은 치아가 움직일 순서와 목표를 설명하고 확인하기 위한 도구이며, 결과를 그대로 보장하는 것은 아닙니다. 정기 내원 때 실제 이동을 확인하고, 필요하면 다시 스캔해 계획을 보완합니다.</p>
 </details>
 </div>
 </section>
@@ -329,7 +385,7 @@ a.wd-lang-item:hover,a.wd-lang-item:focus-visible{background:#E8E6E1}
 </nav>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5520}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7400}}'>
 class Component extends DCLogic {
 renderVals() {
 return {};
