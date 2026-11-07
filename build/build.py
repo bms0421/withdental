@@ -226,6 +226,9 @@ def page_html(name, cfg, helmet, body, logic, props, prefix, prerendered='', faq
     return '''<!doctype html>
 <html lang="%s">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCBR42D2E1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZCBR42D2E1');</script>
 %s
 %s
 <link rel="stylesheet" href="%sassets/site.css">
