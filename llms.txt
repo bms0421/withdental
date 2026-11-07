@@ -34,6 +34,7 @@
 - [미세치주성형](https://withdental.kr/treatments/periodontal-plastic-surgery/): 잇몸퇴축 치근피개술, 결합조직이식, 잇몸 두께 재건, 거미스마일 치은성형술. 치료 사례와 자주 묻는 질문.
 - [투명교정 (인비절라인 · 앤젤얼라이너)](https://withdental.kr/treatments/invisalign/): 치과교정과 전문의가 진단부터 유지 관리까지 계획합니다. 인비절라인과 앤젤얼라이너 두 가지 투명교정 장치를 진료하며, 정밀 검사 후 맞는 장치를 함께 고릅니다. 필요하면 보철과 전문의와 함께 최종 모습을 설계합니다.
 - [브라켓 교정](https://withdental.kr/treatments/braces/): 치과교정과 전문의가 진단부터 유지 관리까지 계획합니다. 메탈 브라켓과 클리피씨(세라믹 자가결찰 브라켓)를 사용하며, 심한 덧니·돌출입처럼 이동량이 큰 경우와 교합 조정에 적합합니다. 필요하면 보철과 전문의와 함께 교정 이후까지 계획합니다.
+- [부분교정](https://withdental.kr/treatments/partial-orthodontics/): 필요한 몇 개의 치아만 옮기는 교정. MTA 교정(앞니 부분교정), 보철치료를 위한 교정(쓰러진 어금니 세우기·공간 정리), 교정적 정출술(잇몸 아래로 부러진 치아를 끌어올려 보존). 교정과·보철과 전문의 협진.
 - [공지사항](https://withdental.kr/notice/): 월별 원장 진료 일정과 휴진 안내
 - [비급여 진료비 안내](https://withdental.kr/fees/)
 
