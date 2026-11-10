@@ -79,7 +79,7 @@ a{color:#26383A}a:hover{color:#1C1F21}
 <span>번호</span><span>분류</span><span>제목</span><span style="text-align: right">등록일</span>
 </div>
 
-<a href="../" class="wd-row" style="display: grid; grid-template-columns: 64px 120px minmax(0, 1fr) 120px; gap: 16px; align-items: center; padding: 20px 8px; border-bottom: 1px solid #D2CEC6; text-decoration: none; color: #1C1F21; background: transparent">
+<a href="../#notice" class="wd-row" style="display: grid; grid-template-columns: 64px 120px minmax(0, 1fr) 120px; gap: 16px; align-items: center; padding: 20px 8px; border-bottom: 1px solid #D2CEC6; text-decoration: none; color: #1C1F21; background: transparent">
 <span style="font-size: 14px; color: #52575B">1</span>
 <span><span style="font-size: 12px; letter-spacing: 0.04em; color: #26383A; border: 1px solid #9AA6A6; padding: 2px 8px">진료 일정</span></span>
 <span style="font-size: 16px; min-width: 0">2026년 11월 진료 일정 안내<span style="font-size: 12px; color: #8A4B3C; margin-left: 8px"></span></span>
@@ -153,7 +153,7 @@ a{color:#26383A}a:hover{color:#1C1F21}
 <span>번호</span><span>분류</span><span>제목</span><span style="text-align: right">등록일</span>
 </div>
 <sc-for list="{{rows}}" as="r" hint-placeholder-count="5">
-<a href="../" class="wd-row" style="display: grid; grid-template-columns: 64px 120px minmax(0, 1fr) 120px; gap: 16px; align-items: center; padding: 20px 8px; border-bottom: 1px solid #D2CEC6; text-decoration: none; color: #1C1F21; background: transparent">
+<a href="../#notice" class="wd-row" style="display: grid; grid-template-columns: 64px 120px minmax(0, 1fr) 120px; gap: 16px; align-items: center; padding: 20px 8px; border-bottom: 1px solid #D2CEC6; text-decoration: none; color: #1C1F21; background: transparent">
 <span style="font-size: 14px; color: #52575B">{{r.no}}</span>
 <span><span style="font-size: 12px; letter-spacing: 0.04em; color: {{r.tagColor}}; border: 1px solid {{r.tagBorder}}; padding: 2px 8px">{{r.cat}}</span></span>
 <span style="font-size: 16px; min-width: 0">{{r.title}}<span style="font-size: 12px; color: #8A4B3C; margin-left: 8px">{{r.example}}</span></span>
