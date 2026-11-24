@@ -659,6 +659,7 @@ a.wd-lang-item:hover,a.wd-lang-item:focus-visible{background:#E8E6E1}
 <div style="flex: 1 1 340px; min-width: 0">
 <p style="margin: 0 0 12px; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; color: #1C1F21">공지</p>
 <ul style="margin: 0; padding: 0; list-style: none; border-top: 1px solid #1C1F21">
+<li style="border-bottom: 1px solid #D2CEC6"><a href="Notice.dc.html" style="text-decoration: none; color: #1C1F21; display: flex; flex-direction: column; gap: 4px; padding: 16px 0; min-height: 44px"><span style="font-size: 16px">12월 진료 일정 안내</span><span style="font-size: 13px; color: #52575B">2026.11.24</span></a></li>
 <li style="border-bottom: 1px solid #D2CEC6"><a href="Notice.dc.html" style="text-decoration: none; color: #1C1F21; display: flex; flex-direction: column; gap: 4px; padding: 16px 0; min-height: 44px"><span style="font-size: 16px">11월 진료 일정 안내</span><span style="font-size: 13px; color: #52575B">2026.11.01</span></a></li></ul>
 <a href="Notice.dc.html" style="display: inline-flex; align-items: center; min-height: 44px; margin-top: 12px; font-size: 14px; text-decoration: none; border-bottom: 1px solid currentColor">공지사항 전체 보기</a>
 </div>
@@ -830,9 +831,22 @@ const CAL = [
 16: 'BK', 17: 'BK', 18: 'BK', 19: 'B', 20: 'B', 21: 'K',
 23: 'BK', 24: 'BK', 25: 'BK', 26: 'B', 27: 'B',
 30: 'B'
+} },
+{ y: 2026, m: 12, satOpen: [5, 19], closed: { 25: '휴진' }, docs: {
+1: 'BK', 2: 'BK', 3: 'B', 4: 'B', 5: 'K',
+7: 'BK', 8: 'BK', 9: 'BK', 10: 'BS', 11: 'B',
+14: 'BK', 15: 'BK', 16: 'BK', 17: 'B', 18: 'B', 19: 'B',
+21: 'BK', 22: 'BK', 23: 'BK', 24: 'B',
+28: 'B', 29: 'BK', 30: 'BK', 31: 'B'
 } }
 ];
-const calIdx = Math.min(Math.max((this.state && this.state.cal) || 0, 0), CAL.length - 1);
+// 기본으로 이번 달 일정을 보여 줌 (지난 달은 화살표로 볼 수 있음)
+const nowD = new Date();
+const nowKey = nowD.getFullYear() * 12 + nowD.getMonth();
+let calDefault = CAL.findIndex((c) => c.y * 12 + c.m - 1 === nowKey);
+if (calDefault < 0) calDefault = nowKey > CAL[CAL.length - 1].y * 12 + CAL[CAL.length - 1].m - 1 ? CAL.length - 1 : 0;
+const calState = this.state && typeof this.state.cal === 'number' ? this.state.cal : calDefault;
+const calIdx = Math.min(Math.max(calState, 0), CAL.length - 1);
 const cm = CAL[calIdx];
 const firstDow = new Date(cm.y, cm.m - 1, 1).getDay();
 const daysIn = new Date(cm.y, cm.m, 0).getDate();
